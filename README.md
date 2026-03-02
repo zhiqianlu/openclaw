@@ -43,6 +43,11 @@ npm run chat
 | `COPILOT_API_URL` | `https://api.githubcopilot.com/v1/chat/completions`   | Copilot 接口地址                       |
 | `COPILOT_MODEL`   | `gpt-4o-mini`                                         | Copilot 模型名称                       |
 
+### 手动验证
+
+1. 运行 `npm run chat`，输入 `/news`，应展示最新资讯列表并输出自动总结。
+2. 输入 `/code 用Python打印Hello`，应返回示例代码；若未配置令牌，将出现本地兜底提示。
+
 ### 测试
 
 ```bash
