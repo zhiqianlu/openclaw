@@ -1,0 +1,48 @@
+# Cursor AI Rules for OpenClaw Project
+
+## General Principles
+- Follow the principle of least surprise
+- Make minimal, surgical changes to accomplish tasks
+- Preserve existing code patterns and conventions
+- Ask for clarification when requirements are ambiguous
+
+## Code Style
+- Use consistent indentation and formatting
+- Follow language-specific best practices
+- Keep line length reasonable (typically 80-100 characters)
+- Use meaningful variable and function names
+
+## Testing
+- Write tests alongside new code
+- Maintain or improve test coverage
+- Use descriptive test names that explain what is being tested
+
+## Documentation
+- Document public APIs and interfaces
+- Keep inline comments focused on "why" not "what"
+- Update documentation when changing functionality
+- Include usage examples for complex features
+
+## Security
+- Never commit sensitive information (API keys, passwords, tokens)
+- Validate all inputs
+- Use secure coding practices
+- Follow the principle of least privilege
+
+## Git Workflow
+- Make focused, atomic commits
+- Write commit messages in present tense
+- Keep commits related to a single logical change
+- Avoid committing generated files or build artifacts
+
+## Performance
+- Consider performance implications of changes
+- Avoid premature optimization
+- Profile before optimizing
+- Document performance-critical sections
+
+## Refactoring
+- Only refactor when explicitly requested
+- Ensure tests pass before and after refactoring
+- Make refactoring changes separate from feature changes
+- Keep refactoring scope limited and focused

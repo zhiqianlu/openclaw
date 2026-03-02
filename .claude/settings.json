@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/claude-code-settings.json",
+  "version": "1.0",
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run test *)",
+      "Bash(npm run build)",
+      "Bash(git --no-pager *)",
+      "Read(**/*.{js,ts,jsx,tsx,json,md,txt,yaml,yml,html,css})"
+    ],
+    "deny": [
+      "Read(**/.env*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/secrets/**)",
+      "Read(**/credentials/**)",
+      "Bash(rm -rf *)",
+      "Bash(sudo *)"
+    ],
+    "ask": [
+      "Bash(npm install *)",
+      "Bash(yarn add *)",
+      "Write(**/package.json)",
+      "Delete(**/*)"
+    ]
+  },
+  "context": {
+    "ignorePatterns": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/.git/**",
+      "**/coverage/**",
+      "**/*.log"
+    ]
+  }
+}
