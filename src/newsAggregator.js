@@ -22,7 +22,7 @@ async function fetchAiNews(fetchImpl = fetch) {
 
 async function summarizeAiNews(articles, copilot = copilotClient) {
   if (!articles || articles.length === 0) {
-    return { articles: [], summary: "没有找到最新的 AI 资讯。" };
+    return { articles: [], summary: "没有找到最新的AI资讯。" };
   }
 
   const condensed = articles
@@ -30,12 +30,12 @@ async function summarizeAiNews(articles, copilot = copilotClient) {
     .join("\n");
 
   const { reply } = await copilot.summarize(
-    `请用简洁的中文要点总结以下 AI 相关新闻：\n${condensed}`
+    `请用简洁的中文要点总结以下AI相关新闻：\n${condensed}`
   );
 
   const summary =
     reply ||
-    "未能从 Copilot 获取总结，但已列出相关新闻，可手动查看上方链接。";
+    "未能从Copilot获取总结，但已列出相关新闻，可手动查看上方链接。";
 
   return { articles, summary };
 }

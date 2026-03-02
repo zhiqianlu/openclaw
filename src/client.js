@@ -9,7 +9,8 @@ function renderResult(result) {
   if (result.type === "news") {
     console.log("📰 最新 AI 资讯：");
     (result.articles || []).forEach((article, index) => {
-      console.log(` ${index + 1}. ${article.title} (${article.url || "无链接"})`);
+      const link = article.url || "无链接"; // 某些资讯可能缺少外部链接，提供兜底文案。
+      console.log(` ${index + 1}. ${article.title} (${link})`);
     });
     console.log("\n总结：");
   }
@@ -18,12 +19,12 @@ function renderResult(result) {
 }
 
 function startCli() {
-  console.log("欢迎使用 OpenClaw 风格 Copilot 应用。");
+  console.log("欢迎使用OpenClaw风格Copilot应用。");
   console.log("指令示例：");
-  console.log(" /code 用 Python 写一个快速排序");
-  console.log(" /news 查看最新 AI 资讯并总结");
-  console.log(" 普通聊天内容将直接交给 Copilot");
-  console.log("按 Ctrl+C 退出。\n");
+  console.log(" /code 用Python写一个快速排序");
+  console.log(" /news 查看最新AI资讯并总结");
+  console.log(" 普通聊天内容将直接交给Copilot");
+  console.log("按Ctrl+C退出。\n");
 
   const rl = readline.createInterface({
     input: process.stdin,

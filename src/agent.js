@@ -11,7 +11,7 @@ class Agent {
     this.fetchImpl = fetchImpl;
     this.systemPrompt =
       systemPrompt ||
-      "You are OpenClaw-like autonomous assistant. You can write code, search latest AI news, and chat concisely.";
+      "You are an OpenClaw-like autonomous assistant. You can write code, search latest AI news, and chat concisely.";
   }
 
   async handle(input) {
