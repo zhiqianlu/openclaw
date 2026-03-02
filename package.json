@@ -1,0 +1,23 @@
+{
+  "name": "openclaw",
+  "version": "1.0.0",
+  "description": "Minimal Copilot-powered assistant that can write code, fetch AI news, and chat via a CLI client.",
+  "main": "src/client.js",
+  "scripts": {
+    "chat": "node src/client.js",
+    "start": "node src/client.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhiqianlu/openclaw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zhiqianlu/openclaw/issues"
+  },
+  "homepage": "https://github.com/zhiqianlu/openclaw#readme"
+}
